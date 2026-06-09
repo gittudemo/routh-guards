@@ -4,6 +4,7 @@ import { Dashboard } from './dashboard/dashboard';
 import { authGuard } from './auth-guard';
 import { canDeactivateGuard } from './can-deactivate-guard';
 import { Profile } from './profile/profile';
+import { Product } from './product/product';
 
 export const routes: Routes = [
   {
@@ -25,4 +26,8 @@ export const routes: Routes = [
     component: Profile,
     canDeactivate: [canDeactivateGuard], // Protect the profile route with the canDeactivateGuard
   },
+  {
+    path:'product/:id',    // Define a route for product details with a dynamic parameter 'id'
+    component: Product
+  }
 ];
