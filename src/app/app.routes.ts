@@ -2,6 +2,8 @@ import { Routes } from '@angular/router';
 import { Login } from './login/login';
 import { Dashboard } from './dashboard/dashboard';
 import { authGuard } from './auth-guard';
+import { canDeactivateGuard } from './can-deactivate-guard';
+import { Profile } from './profile/profile';
 
 export const routes: Routes = [
   {
@@ -17,5 +19,10 @@ export const routes: Routes = [
     path: '', // Define the default route
     redirectTo: 'login', // Redirect to the login page by default
     pathMatch: 'full', // Ensure that the entire URL matches for redirection
+  },
+  {
+    path: 'profile',
+    component: Profile,
+    canDeactivate: [canDeactivateGuard], // Protect the profile route with the canDeactivateGuard
   },
 ];
