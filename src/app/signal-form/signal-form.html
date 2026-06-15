@@ -1,0 +1,12 @@
+<p>signal-form works!</p>
+
+<input type="email" placeholder="Enter your email" Field="loginForm.email" />
+
+<input type="password" placeholder="Enter your password" Field="loginForm.password" />
+
+<button (click)="submit()">Submit</button>
+
+<pre
+  >{{ loginModel() | json }}
+
+</pre>

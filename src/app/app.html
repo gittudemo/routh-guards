@@ -1,5 +1,10 @@
 <!-- routerLink is used to navigate to different routes in the application. It is a directive that allows you to link to different routes defined in your Angular application. In this example, we have three links that navigate to different product details based on the product ID. -->
 
+<!-- import component child -->
+
+<app-child></app-child>
+<app-signal-form></app-signal-form>
+
 <a routerLink="/product/1">Product 1</a> | <a routerLink="/product/2">Product 2</a> |
 <a routerLink="/product/3">Product 3</a> |
 <a [routerLink]="['/products']" [queryParams]="{ category: 'mobile', sort: 'price' }"

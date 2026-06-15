@@ -9,11 +9,13 @@ import { Router } from '@angular/router';
   styleUrl: './login.css',
 })
 export class Login {
-
-  constructor(private auth: Auth, private router: Router) {}
+  constructor(
+    private auth: Auth,
+    private router: Router,
+  ) {}
 
   login() {
     this.auth.login(); // Call the login method from the Auth service to set authentication state
-    this.router.navigate(['/dashboard']); // Navigate to the dashboard after successful login
+    this.router.navigate(['dashboard']); // Navigate to the dashboard after successful login
   }
 }

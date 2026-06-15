@@ -28,11 +28,17 @@ export const routes: Routes = [
     canDeactivate: [canDeactivateGuard], // Protect the profile route with the canDeactivateGuard
   },
   {
-    path:'product/:id',    // Define a route for product details with a dynamic parameter 'id'
-    component: Product
+    path: 'product/:id', // Define a route for product details with a dynamic parameter 'id'
+    component: Product,
   },
-{
-  path:'products',
-  component: Products,
-}
+
+  {
+    path: 'products',
+    component: Products,
+  },
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
 ];
