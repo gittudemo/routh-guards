@@ -5,6 +5,7 @@ import { authGuard } from './auth-guard';
 import { canDeactivateGuard } from './can-deactivate-guard';
 import { Profile } from './profile/profile';
 import { Product } from './product/product';
+import { Products } from './products/products';
 
 export const routes: Routes = [
   {
@@ -29,5 +30,9 @@ export const routes: Routes = [
   {
     path:'product/:id',    // Define a route for product details with a dynamic parameter 'id'
     component: Product
-  }
+  },
+{
+  path:'products',
+  component: Products,
+}
 ];
