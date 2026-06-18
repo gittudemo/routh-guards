@@ -12,4 +12,5 @@ export class Profile {
     return confirm('Are you sure you want to leave this page?'); 
     // Show a confirmation dialog when trying to navigate away from the profile page
   }
+  
 }

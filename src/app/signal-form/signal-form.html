@@ -1,12 +1,20 @@
-<p>signal-form works!</p>
+<h2>Login Form</h2>
 
-<input type="email" placeholder="Enter your email" Field="loginForm.email" />
+<div>
+  <label>Email</label>
+  <input type="email" [(ngModel)]="email" placeholder="Enter Email" />
+</div>
 
-<input type="password" placeholder="Enter your password" Field="loginForm.password" />
+<br />
 
-<button (click)="submit()">Submit</button>
+<div>
+  <label>Password</label>
+  <input type="password" [(ngModel)]="password" placeholder="Enter Password" />
+</div>
 
-<pre
-  >{{ loginModel() | json }}
+<br />
 
-</pre>
+<button (click)="submit()">Login</button>
+
+<!-- <pre>{{ loginModel() | json }}</pre> -->
+<pre>{{ email() | json }} </pre>
